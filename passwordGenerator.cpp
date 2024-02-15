@@ -2,7 +2,7 @@
 #include <random>
 #include <string>
 #include <vector>
-#include <fstream> // Added for file operations
+#include <fstream> 
 #include <ctime>
 #include <algorithm>
 
@@ -35,8 +35,8 @@ int initLength() {
     return length;
 }
 
-Password generatePassword(int length) { // Removed the pw parameter, unnecessary here
-    Password pw; // Create a new Password instance
+Password generatePassword(int length) { 
+    Password pw; 
 
     int numbers;
 
@@ -58,7 +58,7 @@ Password generatePassword(int length) { // Removed the pw parameter, unnecessary
     else {
         for (int i = 0; i < numbers; ++i) {
             int randomNumber = aleatoire(9) + 1;
-            pw.numbers.push_back(randomNumber); // Add the random number to the vector
+            pw.numbers.push_back(randomNumber); 
         }
     }
 
@@ -77,7 +77,6 @@ Password generatePassword(int length) { // Removed the pw parameter, unnecessary
         count = 0;
     }
     else {
-        // Generate random count and place them in the password structure
         for (int i = 0; i < count; ++i) {
             pw.characters += specialChars[aleatoire(5)];
         }
